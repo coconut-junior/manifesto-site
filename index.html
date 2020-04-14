@@ -7,10 +7,47 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h2>I&apos;m Jimmy Blanck and this is what I believe.</h2>
-	<h1>1</h1>
-	<div class = "info-block">
-		Take a look at some of the most talented and well-regarded designers. Now look at some of your own work. Maybe you can’t help but feel that those individuals were gifted with a special talent, or maybe they got lucky and you’d never stand a chance at becoming that skilled. Think again. All those people have one thing in common, and that’s discipline. I strongly believe that before you can focus on your design work, you need to focus on yourself. Can you get up every morning when your alarm clock goes off? Can you get yourself to practice consistently even when nobody’s telling you to? If you can’t do any of those things, then you never truly will know how good you can become. Every person has potential to become the next big designer. The first step to getting there is learning how to work like one.
+	<div class = "feature">
+		<h2>I&apos;m <span class = "emphasis">Jimmy Blanck</span> <br>and this is what<br> <span style = "font-size: 150px; color: #1f2021;">I believe.</span></h2>
 	</div>
+	<a href = ""><div class="button">Read my Manifesto</div></a>
+	
+	<div class = "banner" style = "flex-direction: row-reverse;">
+		<h1>1</h1>
+		<h3>You&apos;re better than you think.
+			<div class = "info-block">
+				Take a look at some of the most talented and well-known designers. Now look at some of your own work. Maybe you can’t help but feel that those individuals were gifted with a special talent, or maybe they got lucky and you’d never stand a chance at becoming that skilled. Think again. All those people have one thing in common, and that’s discipline. I strongly believe that before you can focus on your design work, you need to focus on yourself. Can you get up every morning when your alarm clock goes off? Can you get yourself to practice consistently even when nobody’s telling you to? If you can’t do any of those things, then you never truly will know how good you can become. Every person has potential to become the next big designer. The first step to getting there is learning how to work like one.
+			</div>
+		</h3>
+		
+	</div>
+	<div class = "banner">
+		<h1>2</h1>
+		<h3>You are not your designs.
+			<div class = "info-block">
+				A lot of people would disagree with that statement. Perhaps they’re too attached to their work, and they view it as a direct reflection of themselves. This simply isn’t true. Your designs are not you and you are not your designs. If you live with the mindset that criticisms and praise about your work are directed at you as a person, you’re mistaken. This is an easy trap to fall into that will ultimately lead you to nowhere. If you hate yourself for a bad design or take criticism too personally, it can severely inhibit your ability to produce work. Do not listen to just one person’s opinions but look for patterns of what multiple people think. You can then take what you learned and improve upon your design with it. Similarly, taking praise to heart is equally bad. If a project was so successful that nothing negative was said about it, you may not feel any motivation to try new ideas or self-reflect on what you think could be improved. Whatever you do, try to keep your emotions as far removed as possible.
+		</div>
+
+		</h3>
+	</div>
+	<div class = "banner" style = "flex-direction: row-reverse;">
+		<h1 style = "line-height: 250px;">3</h1>
+		<h3>Design is not everything.
+			<div class = "info-block">
+				While mastering design may be your only goal at the moment, try to keep an open mind. There are plenty of other disciplines that can quench that thirst for creativity. By trying new things, you’ll meet lots of new people with similar interests that will inspire you. You may even discover that becoming skilled in one discipline will help you with another that is seemingly unrelated. Try to be a well-rounded individual because it will certainly pay off.
+			</div>
+		</h3>
+	</div>
+
+	<!--<div class = "cursor"></div>-->
+
+	<script>
+		const cursor = document.querySelector('.cursor');
+
+		document.addEventListener('mousemove', e => {
+			cursor.setAttribute("style", "top: " + (e.pageY - 20) + "px;" + "left: " + (e.pageX - 20) + "px;")
+		})
+	</script>
+
 </body>
 </html>

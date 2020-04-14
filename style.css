@@ -1,6 +1,66 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	color: white;
+}
+
+body {
+	background-color: #1f2021;
+	overflow-x: hidden;
+}
+
+*::selection {
+	color: white;
+	background-color: #9054ff;
+}
+
+.feature {
+	display: flex;
+	align-items: center;
+	-webkit-justify-content: center;
+	-webkit-flex-direction: column;
+	height: 90vh;
+	width: auto;
+	background-color: white;
+	border-style: solid;
+	border-width: 10px;
+	border-color: #1f2021;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 72px;
+	color: #1f2021;
+	margin: 80px;
+}
+
+h3 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 36px;
+	padding: 40px 80px 40px 80px;
+	clear: left;
+	align-self: flex-start;
+}
+
+.emphasis {
+	color: #9054ff;
+	animation-name: highlight;
+	animation-duration: 2s;
+}
+
+.banner {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+	margin: 80px;
+}
+
+.info-block {
+	font-family: "Source Code Pro";
+	font-weight: normal;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin-top: 40px;
 }
 
 h1 {
@@ -8,27 +68,159 @@ h1 {
 	font-size: 400px;
 	padding: 40px;
 	color: white;
-	background-color: red;
-	width: 350px;
-	height: 350px;
+	border-style: solid;
+	border-color: #9054ff;
+	min-width: 350px;
+	max-width: 350px;
+	min-height: 350px;
+	max-height: 350px;
 	text-align: center;
 	line-height: 300px;
-	margin: 40px;
-	transition: 0.3s;
+	float: left;
+	animation-name: grow;
+	animation-duration: 0.5s;
+	transition: 0.5s;
 }
 
-h2 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 72px;
-	margin: 40px;
+.cursor {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border-style: solid;
+	border-color: #9054ff;
+	opacity: 90%;
+	animation: cursorAnim 0.5s infinite alternate;
 }
 
-h3 {
-
+.cursor::after {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border-style: solid;
+	border-color: #9054ff;
+	border-width: 12px;
+	opacity: 50%;
+	top: -12px;
+	left: -12px;
+	animation: cursorAnim2 0.5s infinite alternate;
 }
 
-.info-block {
+a {
+	text-decoration: none;
+	margin: auto;
+}
+
+.button {
+	background-color: white;
+	color: #1f2021;
 	font-family: "Source Code Pro";
-	font-size: 16px;
+	font-size: 18px;
+	padding: 25px;
+	transition: 0.3s;
+	width: 200px;
+	margin: auto;
+	border-radius: 8px;
+	content: "Read my Manifesto";
+	position: relative;
+	top: -50px;
+	transition: 0.5s;
+	text-align: center;
+}
+
+.button:hover {
+	width: 200px;
+	background-color: #9054ff;
+	color: white;
+}
+
+.button:active {
 	padding: 40px;
+}
+
+.banner:hover h1{
+	background-color: #9054ff;
+}
+
+@keyframes highlight {
+	from {
+		color: white;
+	}
+	to {
+		color: #9054ff;
+	}
+}
+
+@keyframes grow {
+	from {
+		transform: scale(0.5);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes cursorAnim {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0.7);
+	}
+}
+
+@keyframes cursorAnim2 {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(0.4);
+	}
+}
+
+@media (min-width: 320px) {
+	h2 {
+		transform: scale(0.5);
+	}
+	h1 {
+		transform: scale(0.8);
+	}
+	h3 {
+		padding: 0px;
+	}
+	.banner {
+		flex-wrap: wrap;
+	}
+}
+
+@media (min-width: 720px) {
+	h2 {
+		transform: scale(0.6);
+	}
+	h1 {
+		transform: scale(0.8);
+	}
+	h3 {
+		padding: 40px;
+	}
+	.banner {
+		flex-wrap: wrap;
+	}
+}
+
+@media (min-width: 1024px) {
+	h2 {
+		transform: scale(0.9);
+	}
+	h1 {
+		transform: scale(1);
+	}
+	h3 {
+		padding: 40px;
+	}
+	.banner {
+		flex-wrap: nowrap;
+	}
 }
