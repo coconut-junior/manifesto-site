@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?u8vidh">
 </head>
 <body>
@@ -35,7 +37,7 @@
 
 			</h3>
 		</div>
-		<div class = "banner" style = "flex-direction: row-reverse;">
+		<div class = "banner" style = "flex-direction: row-reverse; margin-bottom: 80px;">
 			<h1 style = "line-height: 250px;">3</h1>
 			<h3>Design is not <span class = "emphasis">everything<span>.
 				<div class = "info-block">
@@ -46,14 +48,6 @@
 
 		<div class = "cursor"></div>
 	</div>
-
-	<script>
-		const cursor = document.querySelector('.cursor');
-
-		document.addEventListener('mousemove', e => {
-			cursor.setAttribute("style", "top: " + (e.pageY - 40) + "px;" + "left: " + (e.pageX - 40) + "px;")
-		})
-	</script>
-
+	<script type="text/javascript" src = "scripts/cursor-anim.js"></script>
 </body>
 </html>
